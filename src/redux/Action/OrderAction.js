@@ -170,7 +170,7 @@ export const deleteOrder = (id) => async (dispatch, getState) => {
     );
     dispatch({
       type: ORDER_DELETE_SUCCESS,
-      payload: res.data.data,
+      payload: "Xóa yêu cầu tìm bạn cùng phòng thành công",
     });
   } catch (error) {
     dispatch({

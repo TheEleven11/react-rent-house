@@ -42,7 +42,6 @@ export default function Home() {
               <HouseCard
                 id={house._id}
                 name={house.name}
-                area="null"
                 price={house.price}
                 furniture={house.furniture}
                 key={index}

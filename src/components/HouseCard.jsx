@@ -6,7 +6,7 @@ export default function HouseCard(props) {
       <div className="card card-compact border-solid border border-black rounded-none pt-[20px]">
         <figure>
           <img
-            src={props.picture && props.picture[0].fileLink}
+            src={props.picture && props.picture[0]?.fileLink}
             alt=""
             className="h-[300px]"
           />

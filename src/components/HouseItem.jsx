@@ -13,7 +13,7 @@ export default function HouseItem(props) {
       <div className="grid grid-cols-12 gap-20 p-[30px] border border-black bg-white my-[30px]">
         <div className="col-span-5">
           <img
-            src={props.picture && props.picture[0].fileLink}
+            src={props.picture && props.picture[0]?.fileLink}
             alt=""
             className="h-[300px] mx-auto"
           />
