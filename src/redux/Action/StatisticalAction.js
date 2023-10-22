@@ -64,8 +64,8 @@ export const getStatistical = (dates) => async (dispatch, getState) => {
     };
 
     data.user = await getUserStat();
-    // data.house = await getHouseStat();
-    // data.order = await getOrderStat();
+    data.house = await getHouseStat();
+    data.order = await getOrderStat();
     console.log(data);
 
     dispatch({
@@ -73,6 +73,7 @@ export const getStatistical = (dates) => async (dispatch, getState) => {
       payload: data,
     });
   } catch (error) {
+    console.log(error);
     dispatch({
       type: STATISTICAL_FAIL,
       payload: error?.response?.data?.message,
