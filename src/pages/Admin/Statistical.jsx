@@ -42,12 +42,12 @@ export default function Statistical() {
       );
       setHouseData(
         data.dates?.map((date, index) => {
-          return { name: date, house: data.house[index] || 0 };
+          return { name: date, house: data.house[index] };
         })
       );
       setOrderData(
         data.dates?.map((date, index) => {
-          return { name: date, order: data.order[index] || 0 };
+          return { name: date, order: data.order[index] };
         })
       );
     } else if (error) {
@@ -139,7 +139,7 @@ export default function Statistical() {
           data={orderData}
           className="m-auto"
         >
-          <Line type="monotone" dataKey="user" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="order" stroke="#82ca9d" />
           <CartesianGrid stroke="#ccc" />
           <XAxis dataKey="name" />
           <YAxis />
@@ -156,7 +156,7 @@ export default function Statistical() {
           data={houseData}
           className="m-auto"
         >
-          <Line type="monotone" dataKey="user" stroke="red" />
+          <Line type="monotone" dataKey="house" stroke="red" />
           <CartesianGrid stroke="#ccc" />
           <XAxis dataKey="name" />
           <YAxis />
